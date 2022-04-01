@@ -1,0 +1,44 @@
+buat database
+CREATE DATABASE nama-db;
+
+buat tabel
+pilih database dan buat tabel
+USE nama-db;
+CREATE TABLE smartphone(
+	id int primary key AUTO_INCREMENT,
+	merk varchar (20),
+	tahun varchar (10),
+	ram varchar (10),
+	processor varchar (20),
+	gambar varchar (30)
+);
+
+
+input data
+INSERT INTO `smartphone`(`id`, `merk`, `tahun`, `ram`, `processor`, `gambar`) VALUES 
+('','Oppo','2020','8gb','Octa Core','oppo.jpg'),
+('','Asus','2018','2gb','Snapdragon','asus.jpg');
+
+pilih semua data
+SELECT * FROM smartphone;
+
+pilih salah satu data
+SELECT id FROM smartphone;
+
+pilih dua data
+SELECT id, merk FROM smartphone;
+
+pilih berdasarkan data
+SELECT * FROM smartphone where id = 1;
+
+edit data
+UPDATE nama-table set nama-field = 'editan' where id = 1;
+
+hapus data
+delete form nama-table where id = 1;
+
+hapus tabel
+DROP TABLE nama-tabel;
+
+hapus database
+DROP DATABASE nama-db;
